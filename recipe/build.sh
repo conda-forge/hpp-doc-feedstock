@@ -1,4 +1,5 @@
 #!/bin/sh
+ls -l scripts
 
 mkdir build
 cd build
