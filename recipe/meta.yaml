@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4d17b50db3493e035f8baf16e8155cd0e48ab49683a9b8f68bed3b29fea3aadd
+  patches:
+    - patches/fix_package_dep.patch
 
 build:
   number: 0
