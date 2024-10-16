@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2eaa4719535a15cc91a14e554a058a8374e3fc9756f817ae39561e797b4dc98a
-  patches:
-    - patches/fix_package_dep.patch
 
 build:
   number: 0
@@ -33,7 +31,6 @@ requirements:
     - qt-main
     - hpp-practicals
     - hpp-tutorial
-  run:
 
 test:
   requires:
