@@ -29,8 +29,8 @@ requirements:
   host:
     - libboost-devel
     - qt-main
-    - hpp-practicals
-    - hpp-tutorial
+    - hpp-practicals {{ version }}
+    - hpp-tutorial {{ version }}
 
 test:
   requires:
