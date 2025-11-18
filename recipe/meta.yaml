@@ -1,5 +1,5 @@
 {% set name = "hpp-doc" %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 26c1fade8870d6fe0ffe31aeb9951e55b4007d889fa928b3c60787cc9b343ec4
+  sha256: fbf61dfb9635aa26ca4919a8c999565a595290d1dbb2df3431ec9fc7e8f1b28b
 
 build:
   number: 0
@@ -29,8 +29,8 @@ requirements:
   host:
     - libboost-devel
     - qt-main
-    - hpp-practicals
-    - hpp-tutorial
+    - hpp-practicals {{ version }}
+    - hpp-tutorial {{ version }}
 
 test:
   requires:
