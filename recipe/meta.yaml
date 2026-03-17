@@ -10,7 +10,7 @@ source:
   sha256: fbf61dfb9635aa26ca4919a8c999565a595290d1dbb2df3431ec9fc7e8f1b28b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
@@ -23,14 +23,12 @@ requirements:
     - make
     - pkg-config
     - doxygen
-    - {{ cdt('mesa-libgl-devel') }}       # [linux]
-    - {{ cdt('mesa-dri-drivers') }}       # [linux]
-    - {{ cdt('libselinux-devel') }}       # [linux]
   host:
     - libboost-devel
     - qt-main
     - hpp-practicals {{ version }}
     - hpp-tutorial {{ version }}
+    - libgl-devel                         # [linux]
 
 test:
   requires:
