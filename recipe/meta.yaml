@@ -1,16 +1,16 @@
 {% set name = "hpp-doc" %}
-{% set version = "7.0.0" %}
+{% set version = "8.0.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/humanoid-path-planner/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a18eda71044bbf13fdeefa708afad33f9456f93d39aa6b9900b20bb21fa001ae
+  url: https://github.com/humanoid-path-planner/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: c03c94ff1b576bfff8c44bcd474ae69a57b3dca33c95fc07e94f9adcf61ab75f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x.x') }}
